@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corrector de Pruebas - Ingeniería y Desarrollo Sustentable</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Universidad Católica del Norte</p>
+        <h1>Corrector de Pruebas</h1>
+        <p class="subtitle">Ingeniería y Desarrollo Sustentable · 30 preguntas · escala personalizada</p>
+      </div>
+      <div class="hero-actions">
+        <button id="resetAllBtn" class="btn btn-secondary">Borrar registros</button>
+        <button id="exportBtn" class="btn btn-primary">Descargar Excel</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="formCard">
+        <div class="card-header">
+          <h2>Ingreso de respuestas</h2>
+          <span class="badge" id="progressBadge">Paso 1 de 31</span>
+        </div>
+
+        <div id="stepStudent" class="step active">
+          <label for="studentName" class="label">Ingresar nombre del alumno</label>
+          <input id="studentName" class="input" type="text" placeholder="Ej: Gabriel Donoso" maxlength="100" />
+          <p class="helper">Primero ingresa el nombre. Luego podrás registrar una respuesta por pregunta.</p>
+          <button id="startBtn" class="btn btn-primary">Comenzar corrección</button>
+        </div>
+
+        <div id="stepQuestion" class="step">
+          <p class="question-label" id="questionPrompt">Inserte respuesta de la pregunta #1 de Alumno</p>
+          <div class="answer-grid" id="answerGrid">
+            <button class="answer-btn" data-answer="A">A</button>
+            <button class="answer-btn" data-answer="B">B</button>
+            <button class="answer-btn" data-answer="C">C</button>
+            <button class="answer-btn" data-answer="D">D</button>
+            <button class="answer-btn" data-answer="E">E</button>
+          </div>
+          <label for="answerInput" class="label" style="margin-top:16px;">Ingrese respuesta con el teclado</label>
+          <input id="answerInput" class="input" type="text" maxlength="1" placeholder="A - E" autocomplete="off" />
+          <div class="nav-row">
+            <button id="prevBtn" class="btn btn-secondary">Anterior</button>
+            <button id="nextBtn" class="btn btn-primary">Siguiente</button>
+          </div>
+          <p class="helper" id="selectedAnswerText">Respuesta seleccionada: —</p>
+          <p class="helper">Escribe A, B, C, D o E y presiona Enter para avanzar.</p>
+        </div>
+
+        <div id="stepResult" class="step">
+          <div id="resultBox"></div>
+          <div class="nav-row wrap">
+            <button id="newStudentBtn" class="btn btn-primary">Ingresar otro alumno</button>
+            <button id="viewRecordsBtn" class="btn btn-secondary">Ver registros</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Resumen acumulado</h2>
+          <span class="badge" id="countBadge">0 alumnos</span>
+        </div>
+
+        <div class="stats">
+          <div class="stat-box">
+            <span class="stat-title">Promedio</span>
+            <strong id="avgGrade">—</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-title">Nota más alta</span>
+            <strong id="maxGrade">—</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-title">Nota más baja</span>
+            <strong id="minGrade">—</strong>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Alumno</th>
+                <th>Puntaje</th>
+                <th>Nota</th>
+                <th>Errores</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="recordsTableBody">
+              <tr>
+                <td colspan="5" class="empty">Aún no hay alumnos corregidos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
