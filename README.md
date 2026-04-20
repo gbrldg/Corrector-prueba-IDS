@@ -1,6 +1,6 @@
 # Corrector de Pruebas - GitHub Pages
 
-Aplicación web estática para corregir pruebas de 30 preguntas de **Ingeniería y Desarrollo Sustentable**.
+Aplicación web estática para corregir la primera prueba de 30 preguntas del curso **Ingeniería y Desarrollo Sustentable**.
 
 ## Características principales
 
