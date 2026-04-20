@@ -1,4 +1,4 @@
-# Corrector de Pruebas - GitHub Pages
+# Corrector de Pruebas 
 
 Aplicación web estática para corregir la primera prueba de 30 preguntas del curso **Ingeniería y Desarrollo Sustentable**.
 
