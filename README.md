@@ -18,12 +18,6 @@ Aplicación web estática para corregir la primera prueba de 30 preguntas del cu
   - Detalle de errores
   - Respuestas completas (fila por respuesta)
 
-## Estructura del proyecto
-
-- `index.html` – Interfaz principal.
-- `styles.css` – Estilos visuales y responsive.
-- `app.js` – Lógica de navegación, validación, almacenamiento y exportación.
-
 ## Uso
 
 1. Abre `index.html` en el navegador.
@@ -34,18 +28,6 @@ Aplicación web estática para corregir la primera prueba de 30 preguntas del cu
 6. Revisa los registros acumulados en la tabla.
 7. Si quieres corregir un registro previo, haz clic en **Editar**.
 8. Descarga el resultado en Excel usando el botón **Descargar Excel**.
-
-## Cómo publicar en GitHub Pages
-
-1. Crea un repositorio nuevo en GitHub.
-2. Sube los archivos `index.html`, `styles.css` y `app.js`.
-3. Ve a **Settings > Pages**.
-4. En **Build and deployment**, selecciona:
-   - **Source:** `Deploy from a branch`
-   - **Branch:** `main`
-   - **Folder:** `/root`
-5. Guarda los cambios.
-6. Copia el enlace público que GitHub genere.
 
 ## Notas importantes
 
