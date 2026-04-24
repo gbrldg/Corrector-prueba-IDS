@@ -1,7 +1,7 @@
 const correctAnswers = [
-  "B", "C", "E", "E", "B", "E", "D", "E", "A", "C",
+  "B", "C", "E", "C", "B", "E", "D", "E", "A", "C",
   "B", "C", "D", "E", "C", "E", "E", "B", "E", "E",
-  "C", "C", "E", "A", "E", "E", "E", "B", "A", "C"
+  "C", "C", "E", "A", "A", "E", "E", "B", "A", "C"
 ];
 
 const gradeTable = {
